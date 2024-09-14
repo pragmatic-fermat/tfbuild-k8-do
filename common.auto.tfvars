@@ -6,8 +6,9 @@ droplet_size = "s-2vcpu-4gb"
 # Nb Nodes dans chaque cluster
 node_count="2"
 
-# Grab the latest version slug from `doctl kubernetes options versions`
-k8s_version="1.30.4-do.0"
+# Grab the latest version slug from 
+## `doctl kubernetes options versions`
+k8s_version="1.30.5-do.0"
 
 ##
 ## Maintenant utilisée en env Terraform
