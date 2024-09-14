@@ -41,3 +41,8 @@ resource "digitalocean_project" "trainingk8" {
   environment = "Development"
   resources   = digitalocean_kubernetes_cluster.cluster[*].urn
 }
+
+resource "digitalocean_spaces_bucket" "kconfig" {
+  name   = "kconfig-l"
+  region = "fra1"
+}
