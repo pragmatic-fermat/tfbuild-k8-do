@@ -42,7 +42,7 @@ resource "digitalocean_project" "trainingk8" {
   resources   = digitalocean_kubernetes_cluster.cluster[*].urn
 }
 
-resource "digitalocean_spaces_bucket" "kconfig" {
+resource "digitalocean_spaces_bucket" "kconfig-l" {
   name   = "kconfig-l"
   region = "fra1"
 }
