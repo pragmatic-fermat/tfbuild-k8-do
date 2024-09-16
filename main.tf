@@ -45,4 +45,5 @@ resource "digitalocean_project" "trainingk8" {
 resource "digitalocean_spaces_bucket" "kconfig-l" {
   name   = "kconfig-l"
   region = "fra1"
+  force_destroy = true
 }
