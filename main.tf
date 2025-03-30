@@ -24,6 +24,7 @@ resource "digitalocean_kubernetes_cluster" "cluster" {
   name    = "k8-do-grp${count.index}-${var.entropy}"
   region  = var.region_name
   version = var.k8s_version
+  destroy_all_associated_resources = true
 
   # This default node pool is mandatory
   node_pool {
