@@ -8,7 +8,7 @@ node_count="3"
 
 # Grab the latest version slug from 
 ## `doctl kubernetes options versions`
-k8s_version="1.30.10-do.0"
+k8s_version="1.32.2-do.3"
 
 ##
 ## Maintenant utilisée en env Terraform
