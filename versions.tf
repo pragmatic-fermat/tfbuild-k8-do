@@ -16,7 +16,7 @@ variable "entropy" {}
 variable "nb_clusters" { type = number }
 variable "node_count"  { type = number }
 variable "droplet_size" { type = string }
-variable "k8s_version" { type = string 
+variable "k8s_version" { type = string }
 
 provider "digitalocean" {
   token = var.do_token
