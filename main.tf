@@ -16,20 +16,12 @@ variable "region_name" {
 #  type      = number
 #}
 
-####
-# Attention a l'overlap
-resource "digitalocean_vpc" "k8s_vpc" {
-  name   = "k8s-vpc-training"
-  region = var.region_name
-}
-
 resource "digitalocean_kubernetes_cluster" "cluster" {
   count = var.nb_clusters
   name    = "k8-do-grp${count.index}-${var.entropy}"
   region  = var.region_name
   version = var.k8s_version
   destroy_all_associated_resources = true
-  vpc_uuid = digitalocean_vpc.k8s_vpc.id
   cluster_subnet = cidrsubnet("172.16.0.0/12", 8, count.index * 2)
   service_subnet = cidrsubnet("172.16.0.0/12", 8, count.index * 2 + 1)
 
