@@ -2,17 +2,16 @@ variable "region_name" {
   type        = string
 }
 
-variable "droplet_size" {
-  type        = string
-}
-variable "node_count" {
-  type        = string
-}
-variable "k8s_version" {
-  type        = string
-}
-
-# Cette variable est maintenant stockée dans un env de Terraform
+# Ces variables sont maintenant stockées dans un env de Terraform
+#variable "droplet_size" {
+#  type        = string
+#}
+#variable "node_count" {
+#  type        = string
+#}
+#variable "k8s_version" {
+#  type        = string
+#}
 # variable "nb_clusters" {
 #  type      = number
 #}
