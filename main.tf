@@ -18,10 +18,9 @@ variable "region_name" {
 
 ####
 # Attention a l'overlap
-resource "digitalocean_vpc" "k8s-vpc" {
-  name   = "k8s-vpc"
+resource "digitalocean_vpc" "k8s_vpc" {
+  name   = "k8s-vpc-training"
   region = var.region_name
-  ip_range = "172.29.29.0/24"
 }
 
 resource "digitalocean_kubernetes_cluster" "cluster" {
@@ -30,7 +29,7 @@ resource "digitalocean_kubernetes_cluster" "cluster" {
   region  = var.region_name
   version = var.k8s_version
   destroy_all_associated_resources = true
-  vpc_uuid = digitalocean_vpc.k8s-vpc.id
+  vpc_uuid = digitalocean_vpc.k8s_vpc.id
 
   # This default node pool is mandatory
   node_pool {
