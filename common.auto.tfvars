@@ -10,7 +10,8 @@ region_name = "fra1"
 
 # Grab the latest version slug from 
 ## `doctl kubernetes options versions`
-k8s_version="1.32.2-do.3"
+##k8s_version="1.32.2-do.3"
+k8s_version="latest"
 
 ##
 ## Maintenant utilisée en env Terraform
