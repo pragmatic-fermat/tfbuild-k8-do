@@ -14,6 +14,7 @@ variable "secret_key" {}
 variable "entropy" {}
 
 variable "nb_clusters" {}
+variable "node_count" {}
 
 provider "digitalocean" {
   token = var.do_token
