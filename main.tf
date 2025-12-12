@@ -6,15 +6,15 @@ variable "region_name" {
 #variable "droplet_size" {
 #  type        = string
 #}
-variable "node_count" {
-  type        = number
-}
+#variable "node_count" {
+#  type        = number
+#}
 #variable "k8s_version" {
 #  type        = string
 #}
-variable "nb_clusters" {
-  type      = number
-}
+#variable "nb_clusters" {
+#  type      = number
+#}
 
 ####
 # Attention a l'overlap
