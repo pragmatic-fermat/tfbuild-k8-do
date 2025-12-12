@@ -1,7 +1,8 @@
 # Region where resources should be created
 region_name = "fra1"
+## Maintenant utilisée en env Terraform
 # Droplet size
-droplet_size = "s-2vcpu-4gb"
+##droplet_size = "s-2vcpu-4gb"
 
 ## Maintenant utilisée en env Terraform
 # Nb Nodes dans chaque cluster
