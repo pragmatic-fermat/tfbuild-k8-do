@@ -13,10 +13,10 @@ variable "secret_key" {}
 
 variable "entropy" {}
 
-variable "nb_clusters" {}
-variable "node_count" {}
-variable "droplet_size" {}
-variable "k8s_version" {}
+variable "nb_clusters" { type = number }
+variable "node_count"  { type = number }
+variable "droplet_size" { type = string }
+variable "k8s_version" { type = string 
 
 provider "digitalocean" {
   token = var.do_token
