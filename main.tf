@@ -30,8 +30,8 @@ resource "digitalocean_kubernetes_cluster" "cluster" {
   version = var.k8s_version
   destroy_all_associated_resources = true
   vpc_uuid = digitalocean_vpc.k8s_vpc.id
-  cluster_subnet = "192.168.16.0/20"
-  service_subnet = "192.168.32.0/20"
+  cluster_subnet = cidrsubnet("192.168.0.0/16", 4, count.index * 2)
+  service_subnet = cidrsubnet("192.168.0.0/16", 4, count.index * 2 + 1)
 
   # This default node pool is mandatory
   node_pool {
